@@ -32,9 +32,7 @@ export function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome, Eduardo</Text>
-      <Text style={styles.greetings}>
-        {gretting}
-      </Text>
+      <Text style={styles.greetings}>{gretting}</Text>
       <TextInput
         style={styles.input}
         placeholder="New Skill"
@@ -72,7 +70,7 @@ const styles = StyleSheet.create({
     padding: Platform.OS === 'ios' ? 15 : 0,
     marginTop: 30,
   },
-  greetings:{
+  greetings: {
     color: '#FFF',
     fontSize: 12,
     marginTop: 12,
