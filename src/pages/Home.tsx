@@ -32,7 +32,7 @@ export function Home() {
     setMySkills(oldState => oldState.filter(skill => skill.id !== id));
   }
 
-  useEffect(() => {
+  function getGretting() {
     const currentHour = new Date().getHours();
     if (currentHour < 12) {
       setGretting('Good Morning');
@@ -41,6 +41,10 @@ export function Home() {
     } else {
       setGretting('Good night');
     }
+  }
+
+  useEffect(() => {
+    getGretting();
   }, []);
 
   return (
